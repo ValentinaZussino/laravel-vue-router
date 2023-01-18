@@ -1,26 +1,28 @@
 <template>
-    <section>
-    <h1>Lista dei progetti</h1>
-    <div class="row">
-            <div class="col-12 col-md-4" v-for="(project, i) in projects" :key="i">
+    <section class="container my-5">
+        <h1>Lista dei progetti</h1>
+        <div class="row">
+            <div class="col-12 col-md-4 mt-4" v-for="(project, i) in projects" :key="i">
                 <div class="card" style="width: 18rem;">
-                    <img :src="`${store.imagBasePath}${project.cover_image}`" class="card-img-top" :alt="project.title">
-                    <div class="card-body">
+                    <img v-if="project.cover_image" :src="`${store.imagBasePath}${project.cover_image}`" class="card-img-top" :alt="project.title">
+                    <img v-else src="https://via.placeholder.com/1200x840/DDDDDD/444444?text=VZ+Portfolio" alt="C/O https://placeholder.com/">
+                    <div class="card-body vz-card-body">
                         <h5 class="card-title">{{project.title}}</h5>
                         <p class="card-text">{{ truncateContent(project.description) }}</p>
-                        <router-link class="btn btn-primary" :to="{name: 'single-project', params:{slug: project.slug}}">
-                        Vedi il post
+                        <router-link class="btn btn-info" :to="{name: 'single-project', params:{slug: project.slug}}">
+                        Vedi il progetto
                         </router-link>                    
                     </div>
                 </div>
             </div>
-    </div>
-    <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Precedente</a></li>
-    <li class="page-item" v-for="n in lastPage"><a class="page-link" @click="getProjects(n)">{{n}}</a></li>    
-  </ul>
-</nav>
+        </div>
+        <nav aria-label="Page navigation example" class="mt-3">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#" @click="previous">Precedente</a></li>
+                <li class="page-item" v-for="n in lastPage"><a class="page-link" @click="getProjects(n)">{{n}}</a></li>  
+                <li class="page-item"><a class="page-link" href="#" @click="next">Successiva</a></li>  
+            </ul>
+        </nav>
     </section>
 </template>
 
@@ -55,7 +57,19 @@
                 return text.substr(0,this.contentMaxLen) + '...';
             }
             return text;
-           }
+           },
+           previous(){
+            if(this.currentPage > 1){
+                this.currentPage--;
+                this.getProjects(this.currentPage);
+            }
+           },
+           next(){
+            if(this.currentPage < this.lastPage){
+                this.currentPage++;
+                this.getProjects(this.currentPage);
+            }
+           },
         },
         mounted(){
             this.getProjects(1);
