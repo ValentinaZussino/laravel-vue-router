@@ -35,8 +35,8 @@
                         routeName: 'about'
                     },
                     {
-                        label: 'Posts',
-                        routeName: 'posts'
+                        label: 'Projects',
+                        routeName: 'projects'
                     },
                     {
                         label: 'Contatti',

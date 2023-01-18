@@ -5,8 +5,8 @@ import AboutComponent from './pages/AboutComponent.vue';
 import ContactsComponent from './pages/ContactsComponent.vue';
 import HomePage from './pages/HomePage.vue';
 import NotfoundComponent from './pages/NotfoundComponent.vue';
-import PostsComponent from './pages/PostsComponent.vue';
-import SinglePostComponent from './pages/SinglePostComponent.vue';
+import Projects from './pages/Projects.vue';
+import SingleProject from './pages/SingleProject.vue';
 
 
 
@@ -22,14 +22,14 @@ const router = createRouter({
             component: HomePage
         },
         {
-            path: '/posts',
-            name: 'posts',
-            component: PostsComponent
+            path: '/projects',
+            name: 'projects',
+            component: Projects
         },
         {
-            path: '/posts/:slug',
-            name: 'single-post',
-            component: SinglePostComponent
+            path: '/projects/:slug',
+            name: 'single-project',
+            component: SingleProject
         },
         {
             path: '/about',
