@@ -1,12 +1,13 @@
 <template>
     <div>
-        <h1>Home</h1>
+        <h1>Post singolo</h1>
     </div>
+    
 </template>
 
 <script>
     export default {
-        name: 'HomeComponent'
+        name: 'SinglePostComponent'
     }
 </script>
 
