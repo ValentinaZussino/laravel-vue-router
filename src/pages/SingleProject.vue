@@ -15,6 +15,9 @@
                     <p> <span class="fw-bold">Description:</span> <br> {{ project.description }}</p>
                 </div>
             </div>
+            <router-link class="btn btn-info mt-2" :to="{name: 'projects'}">
+            Torna ai progetti
+            </router-link>
     </section>
     <section v-else>
         ...Loading...
