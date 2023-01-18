@@ -3,13 +3,15 @@
         <h1>Lista dei progetti</h1>
         <div class="row">
             <div class="col-12 col-md-4 mt-4" v-for="(project, i) in projects" :key="i">
-                <div class="card" style="width: 18rem;">
+                <div class="card h-100" style="width: 18rem;">
                     <img v-if="project.cover_image" :src="`${store.imagBasePath}${project.cover_image}`" class="card-img-top" :alt="project.title">
                     <img v-else src="https://via.placeholder.com/1200x840/DDDDDD/444444?text=VZ+Portfolio" alt="C/O https://placeholder.com/">
-                    <div class="card-body vz-card-body">
+                    <div class="card-body">
                         <h5 class="card-title">{{project.title}}</h5>
-                        <p class="card-text">{{ truncateContent(project.description) }}</p>
-                        <router-link class="btn btn-info" :to="{name: 'single-project', params:{slug: project.slug}}">
+                        <div>
+                            <p class="card-text">{{ truncateContent(project.description) }}</p>
+                        </div>
+                        <router-link class="btn btn-info mt-2" :to="{name: 'single-project', params:{slug: project.slug}}">
                         Vedi il progetto
                         </router-link>                    
                     </div>
