@@ -8,13 +8,33 @@ $fa-font-path: '../webfonts';
 
 @import 'bootstrap/scss/bootstrap';
 
-body{
-    background-color: rgb(212, 120, 54);
+body {
+    background: linear-gradient(rgb(2, 2, 100), black) ;
+    background-repeat: no-repeat;
     color: black;
 }
 
 img {
     max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+main {
+    height: 100vh;
+}
+h1, h2 {
+    color: white;
+}
+
+.vz_btn_violet {
+    background-color: $vz_violet;
+    color: white;
+
+    &:hover {
+        background-color: $vz_pink;
+    }
 }
 
 .vz-card-body{

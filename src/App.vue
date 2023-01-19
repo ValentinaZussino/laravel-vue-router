@@ -6,7 +6,10 @@
       <li v-for="(project,i) in projects" :key="i">{{ project.title }}</li>
     </ul>
   </div> -->
-  <router-view></router-view>
+  <main>
+    <router-view></router-view>
+  </main>
+  
 </template>
 
 <script>

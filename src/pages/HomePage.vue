@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <section class="container my-5">
         <h1>Home</h1>
-    </div>
+    </section>
     
 </template>
 

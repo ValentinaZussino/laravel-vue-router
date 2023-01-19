@@ -1,7 +1,7 @@
 <template>
     <section class="container my-5">
         <h1>Lista dei progetti</h1>
-        <div class="row">
+        <div class="row mb-5">
             <div class="col-12 col-md-4 mt-4" v-for="(project, i) in projects" :key="i">
                 <div class="card h-100" style="width: 18rem;">
                     <img v-if="project.cover_image" :src="`${store.imagBasePath}${project.cover_image}`" class="card-img-top" :alt="project.title">
@@ -11,14 +11,14 @@
                         <div>
                             <p class="card-text">{{ truncateContent(project.description) }}</p>
                         </div>
-                        <router-link class="btn btn-info mt-2" :to="{name: 'single-project', params:{slug: project.slug}}">
+                        <router-link class="btn vz_btn_violet mt-2" :to="{name: 'single-project', params:{slug: project.slug}}">
                         Vedi il progetto
                         </router-link>                    
                     </div>
                 </div>
             </div>
         </div>
-        <nav aria-label="Page navigation example" class="mt-3">
+        <nav aria-label="Page navigation example" class="">
             <ul class="pagination">
                 <li class="page-item"><a class="page-link" href="#" @click="previous">Precedente</a></li>
                 <li class="page-item" v-for="n in lastPage"><a class="page-link" @click="getProjects(n)">{{n}}</a></li>  

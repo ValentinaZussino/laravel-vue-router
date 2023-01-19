@@ -22,7 +22,7 @@
                     {{ error }}
                 </p>
             </div>
-            <button class="btn btn-lg btn-primary text-white" type="submit" :disabled="loading">{{loading ? 'Sending...' : 'Send'}}</button>
+            <button class="btn btn-lg vz_btn_violet text-white" type="submit" :disabled="loading">{{loading ? 'Sending...' : 'Send'}}</button>
         </form>
     </div>
 </template>
