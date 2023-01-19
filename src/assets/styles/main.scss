@@ -31,6 +31,7 @@ h1, h2 {
 .vz_btn_violet {
     background-color: $vz_violet;
     color: white;
+    transition: all 0.5s;
 
     &:hover {
         background-color: $vz_pink;

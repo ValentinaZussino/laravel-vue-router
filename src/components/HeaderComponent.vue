@@ -78,6 +78,7 @@ header {
             letter-spacing: 1.5px;
             margin-right: 10px;
             border-bottom: 2px solid transparent;
+            transition: all 0.5s;
 
             &:hover {
                 color: $vz_pink;
