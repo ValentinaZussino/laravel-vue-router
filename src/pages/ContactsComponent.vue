@@ -1,13 +1,21 @@
 <template>
-    <div>
-        <h1>Contacts</h1>
-    </div>
-    
+    <section class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Contatti</h1>
+                <ContactForm></ContactForm>
+            </div>
+        </div>
+    </section>
 </template>
 
 <script>
+import ContactForm from '../components/ContactForm.vue';
     export default {
-        name: 'ContactsComponent'
+        name: 'ContactsComponent',
+        components: {
+            ContactForm
+        }
     }
 </script>
 
