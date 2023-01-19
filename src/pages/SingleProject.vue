@@ -2,7 +2,8 @@
     <section v-if="project" class="container mt-5">
             <h2 class="text-uppercase">{{ project.title }}</h2>
             <div class="w-50 h-50 my-3">
-                <img :src="`${store.imagBasePath}${project.cover_image}`" alt="">
+                <img v-if="project.cover_image" :src="`${store.imagBasePath}${project.cover_image}`" alt="">
+                <img v-else src="https://via.placeholder.com/1200x840/DDDDDD/444444?text=VZ+Portfolio" alt="C/O https://placeholder.com/">
             </div>
             <div>
                 <div v-if="project.type">
