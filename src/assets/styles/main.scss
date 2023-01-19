@@ -9,9 +9,9 @@ $fa-font-path: '../webfonts';
 @import 'bootstrap/scss/bootstrap';
 
 body {
+    min-height: 100vh;
     background: linear-gradient(rgb(2, 2, 100), black) ;
     background-repeat: no-repeat;
-    color: black;
 }
 
 img {
@@ -22,7 +22,7 @@ a {
     text-decoration: none;
 }
 main {
-    height: 100vh;
+    // height: calc(100vh - 100px);
 }
 h1, h2 {
     color: white;

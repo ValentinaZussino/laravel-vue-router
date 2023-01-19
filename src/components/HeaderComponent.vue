@@ -53,7 +53,7 @@
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
 header {
-    height: 100px;;
+    height: 100px;
 
     nav {
         height: 100%;
@@ -84,6 +84,10 @@ header {
                 color: $vz_pink;
                 border-bottom: 2px solid $vz_pink;
             }
+
+            // &:active {
+            //     color: $vz_violet;
+            // }
         }
     }
 }

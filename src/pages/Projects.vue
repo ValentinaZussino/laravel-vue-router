@@ -72,6 +72,7 @@
                 this.getProjects(this.currentPage);
             }
            },
+           
         },
         mounted(){
             this.getProjects(1);
