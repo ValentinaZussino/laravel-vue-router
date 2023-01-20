@@ -1,8 +1,8 @@
 <template>
-    <section class="container my-5">
+    <section class="container my-5" id="projects-page">
         <h1>Lista dei progetti</h1>
         <div class="row mb-5">
-            <div class="col-12 col-md-4 mt-4" v-for="(project, i) in projects" :key="i">
+            <div class="col-12 col-md-6 mt-4" v-for="(project, i) in projects" :key="i">
                 <ProjectCard :project="project"/>
             </div>
         </div>
@@ -54,4 +54,13 @@
 </script>
 
 <style lang="scss" scoped>
+#projects-page{
+    ul {
+        li{
+            a {
+                cursor: pointer;
+            }
+        }
+    }
+}
 </style>
