@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 
-import AboutComponent from './pages/AboutComponent.vue';
-import ContactsComponent from './pages/ContactsComponent.vue';
+import AboutPage from './pages/AboutPage.vue';
+import ContactsPage from './pages/ContactsPage.vue';
 import HomePage from './pages/HomePage.vue';
-import NotfoundComponent from './pages/NotfoundComponent.vue';
+import NotfoundPage from './pages/NotfoundPage.vue';
 import Projects from './pages/Projects.vue';
 import SingleProject from './pages/SingleProject.vue';
 
@@ -34,17 +34,17 @@ const router = createRouter({
         {
             path: '/about',
             name: 'about',
-            component: AboutComponent
+            component: AboutPage
         },
         {
             path: '/contacts',
             name: 'contacts',
-            component: ContactsComponent
+            component: ContactsPage
         },
         {
             path: '/:pathMatch(.*)*',
             name: 'not-found',
-            component: NotfoundComponent
+            component: NotfoundPage
         },
     ]
 });

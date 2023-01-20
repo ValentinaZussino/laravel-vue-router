@@ -33,7 +33,7 @@
                         routeName: 'home'
                     },
                     {
-                        label: 'Chi siamo',
+                        label: 'About',
                         routeName: 'about'
                     },
                     {
