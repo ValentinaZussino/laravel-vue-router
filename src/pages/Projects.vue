@@ -20,9 +20,9 @@
         </div>
         <nav aria-label="Page navigation example" class="">
             <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#" @click="previous">Precedente</a></li>
+                <li class="page-item" :class="{'disabled': currentPage === 1}"><a class="page-link" href="#" :disabled="currentPage === 1" @click="getProjects(currentPage - 1)">Precedente</a></li>
                 <li class="page-item" v-for="n in lastPage"><a class="page-link" @click="getProjects(n)">{{n}}</a></li>  
-                <li class="page-item"><a class="page-link" href="#" @click="next">Successiva</a></li>  
+                <li class="page-item" :class="{'disabled': currentPage === lastPage}"><a class="page-link" href="#" :disabled="currentPage === lastPage" @click="getProjects(currentPage + 1)">Successiva</a></li>  
             </ul>
         </nav>
     </section>
@@ -60,19 +60,6 @@
             }
             return text;
            },
-           previous(){
-            if(this.currentPage > 1){
-                this.currentPage--;
-                this.getProjects(this.currentPage);
-            }
-           },
-           next(){
-            if(this.currentPage < this.lastPage){
-                this.currentPage++;
-                this.getProjects(this.currentPage);
-            }
-           },
-           
         },
         mounted(){
             this.getProjects(1);

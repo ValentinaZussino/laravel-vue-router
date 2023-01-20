@@ -42,7 +42,7 @@ const router = createRouter({
             component: ContactsComponent
         },
         {
-            path: '/*',
+            path: '/:pathMatch(.*)*',
             name: 'not-found',
             component: NotfoundComponent
         },
